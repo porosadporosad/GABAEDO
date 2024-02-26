@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export default function Banner({ onSearch }) {
   const [keyword, setKeyword] = useState('');
+
   return (
     <Article>
       <Section>
@@ -45,6 +46,7 @@ const Section = styled.section`
     width: 400px;
     height: 40px;
     margin: 0 auto;
+    padding-left: 10px;
     border: 1px solid #b6856a;
     border-radius: 10px;
   }

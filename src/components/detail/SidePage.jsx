@@ -13,8 +13,11 @@ export default function SidePage() {
   const { isLoading: isLoadingPosts, isError: isErrorPosts, data: postsData } = useQuery('posts', getPosts);
   const { isLoading: isLoadingPlaces, isError: isErrorPlaces, data: placesData } = useQuery('places', getPlaces);
   const { id } = useParams();
-  const postData = postsData && postsData.find((post) => post.id === id);
+  const postData = postsData && postsData.find((post) => post.postId === id);
   const placeData = placesData && placesData.filter((item) => item.postId === id);
+
+  console.log(id);
+  console.log(postData);
 
   if (isLoadingPosts || isLoadingPlaces) {
     return <h1>Loading</h1>;

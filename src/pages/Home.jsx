@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Banner from '../components/Banner';
-import CurationList from '../components/CurationList';
+import PostList from '../components/PostList';
 
 export default function Home() {
   const [searchKeyword, setSearchKeyword] = useState('');
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Banner onSearch={setSearchKeyword} />
-      <CurationList keyword={searchKeyword} />
+      <PostList keyword={searchKeyword} />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { collection, getDocs, addDoc } from 'firebase/firestore';
+import { addDoc, collection, getDocs } from 'firebase/firestore';
 import { useQuery } from 'react-query';
 import { auth, db } from 'shared/firebase';
 
@@ -68,27 +68,6 @@ export const getPlaces = async () => {
 };
 
 //회원가입, 로그인은 따로
-
-//파이어베이스에 게시글 리스트 추가하기
-export const addPosts = async () => {
-  const newPost = {
-    postId: crypto.randomUUID(),
-    userId: '',
-    nickname: '',
-    createdAt: new Date().toISOString(),
-    title: '',
-    content: '',
-    hashtag: []
-  };
-  try {
-    const docRef = await addDoc(collection(db, 'posts'), newPost);
-
-    return docRef.id;
-  } catch (error) {
-    console.error('게시글 추가하기 에러', error);
-    throw error;
-  }
-};
 
 // 파이어베이스에 장소 리스트 추가하기
 export const addPlace = async () => {

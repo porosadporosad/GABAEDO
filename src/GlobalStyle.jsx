@@ -67,6 +67,7 @@ table {
 
 * {
   box-sizing: border-box;
+	font-family: "SunBatang-Light";
 }
 
 p {
