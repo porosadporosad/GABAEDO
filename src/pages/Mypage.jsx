@@ -1,12 +1,10 @@
 import Profile from '../components/Mypage/Profile';
 import React from 'react';
 
-function Mypage() {
+export default function Mypage() {
   return (
     <>
       <Profile />
     </>
   );
 }
-
-export default Mypage;
