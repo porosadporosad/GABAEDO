@@ -39,7 +39,7 @@ export default function PlacesData({ placesData }) {
             <h3>{place.address}</h3>
             <BtnSection>
               <MoveToDetailBtn onClick={() => navigate(`detail/${place.postId}`)}>가배도 보러가기</MoveToDetailBtn>
-              <YoutubeBtn onMouseEnter={() => setCafeName(place.name)} onMouseLeave={() => setCafeName('')}>
+              <YoutubeBtn onClick={() => setCafeName(place.name)}>
                 <YoutubeIcon src={youtubeIcon} alt="유튜브 아이콘" />
               </YoutubeBtn>
             </BtnSection>

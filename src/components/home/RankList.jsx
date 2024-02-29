@@ -8,9 +8,8 @@ export default function RankList({ UserRank }) {
     <ListSection>
       <InfiniteScroll length={UserRank.length}>
         {duplicatedUserRank.map((user, index) => (
-          <RankListBox key={index}>
-            {(index === 0 || index === UserRank.length) && <CrownIcon>👑</CrownIcon>}
-            <UserNickname>{user.nickname}</UserNickname>
+          <RankListBox>
+            <UserNickname key={index}>{(index === 0 || index === UserRank.length) && <CrownIcon>👑</CrownIcon>}{user.nickname}{(index === 0 || index === UserRank.length) && <CrownIcon>👑</CrownIcon>}</UserNickname>
             <PostsNumber>{user.number}개의 가배도</PostsNumber>
           </RankListBox>
         ))}

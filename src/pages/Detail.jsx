@@ -10,7 +10,7 @@ import Loading from 'components/Loading';
 
 const mapCenterDefault = { lat: 37.578611, lng: 126.977222 };
 
-function Detail() {
+export default function Detail() {
   const [isOpenIndex, setIsOpenIndex] = useState(null);
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [mapCenter, setMapCenter] = useState(mapCenterDefault);
@@ -96,7 +96,6 @@ function Detail() {
     </StFullScreenContainer>
   );
 }
-export default Detail;
 
 const StFullScreenContainer = styled.div`
   width: 100vw;

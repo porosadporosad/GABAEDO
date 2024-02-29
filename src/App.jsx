@@ -6,7 +6,7 @@ import Router from 'shared/Router';
 
 const queryClient = new QueryClient();
 
-function App() {
+export default function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
@@ -17,5 +17,3 @@ function App() {
     </>
   );
 }
-
-export default App;
